@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if title %}
+  <title>{{ title }} - Paon Automation </title>
+  {% else %}
+  <title>Electronics Manufacturing and Cloud Software</title>
+  {% endif %}
+
+  <link rel="manifest" href="{{ url_for('static', filename='other/site.webmanifest') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icon.png') }}">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+    Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+    your experience and security.</p>
+  <![endif]-->
+
+  <!-- application content starts here -->
+  <header class="main-header">
+    
+      <a href="https://paon.co.ke/">
+        <img src="{{ url_for('static', filename='img/PAON_LOGO.png') }}">
+      </a>
+      <nav>  
+        <ul class="main-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Blog">Blog</a></li>
+          <li><a href="#About_Us">About Us</a></li>
+          <li><a href="#Careers">Careers</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <h1>We make your ideas come to life</h1>
+      <h2>Electronic Manufacturing</h2>
+      <h2>Software Development</h2>
+      <a href="https://paon.co.ke/#services">Learn More</a>
+    
+  </header>
+
+  <main>
+    
+
+    <!-- hopefully a full width article-->
+    <article>
+      <img>
+      <h2>Who We Are</h2>
+      <p>
+        Established in 2017 and based in Nairobi, Kenya, Paon Automation focuses
+        on leveraging cloud technology and electronics to create intelligent, 
+        innovative, efficient, and low-cost technologies which simplify your daily
+        life - or your customers’ lives.
+      </p>
+      <img>
+    </article>
+
+    <!-- The next 3 articles, each expected to float side by side with 
+      representative image -->
+    <article>
+      <img>
+      <h2>Customized Software Development</h2>
+      <p>
+        We develop cloud software to provide unique business advantages for our 
+        customers.From interactive frontend apps used to facilitate clients, to 
+        intelligent backend software which automates tasks, Paon provides the 
+        complete software development package.
+      </p>
+      <a href="https://paon.co.ke/customized-software-development/">More</a>
+    </article>
+
+    <article>
+      <img>
+      <h2>Electronics Manufacturing</h2>
+      <p>
+        Most major electronics in our East African markets are not designed for 
+        our unique needs; they're intended for western infrastructure.Paon 
+        electronics manufacturing provides an alternative to the Kenyan market 
+        allowing SME's to match high-quality 'smart' electronics to exact local 
+        requirements. No more 'jua cali' modifications to solve your problem.
+      </p>
+      <a href="https://paon.co.ke/electronics-manufacturing/">More</a>
+    </article>
+
+    <article>
+      <img>
+      <h2>Data Analytics</h2>
+      <p>
+        The power of data and its ability to supply answers to business problems, 
+        enables us to provide actionable insight which can transform your business.
+        Data analytics is a crucial part of all Paon software, and make no mistake, 
+        it is one of the key driving forces which separates growing business, and stagnant ones.
+      </p>
+      <a href="https://paon.co.ke/data-analytics/">More</a>
+    </article>
+
+    <section>
+    <h1>Work with us</h1>
+    <p>
+      When startups and small business work with huge organisations, they become just
+      another cog in this massive, complex system. They're undervalued and often lost.
+      Collaboration with Paon means focused work, real conversations, and meaningful 
+      action. If you are ready to use innovative technologies to simplify you life and
+      give your business a head start over your peers, then you are ready. Choose Paon.
+    </p>
+    <a href="#contact-us">Get in Touch</a>
+    </section>
+
+    <section>
+      <h1>Contact Us</h1>
+      <p>And we will get in touch as soon as possible</p>
+
+      <img> <!-- basic smartphone icon -->
+      <h4>Give us a call</h4>
+      <p>Let us know how we can help you OR how we can do better +254-788-927192</p>
+
+      <a href="https://twitter.com/PaonAutomation">
+        <img> <!-- twitter icon/image -->
+      </a>
+      <h4>Reach us on twitter</h4>
+      <p>Follow @PaonAutomation on twitter and converse with us in real time</p>
+
+      <img> <!-- Location Pin icon -->
+      <h4>Drop by and talk</h4>
+      <p>Find us at ACK Garden house, 2nd floor, 1st Ngong Avenue, Upperhill, Nairobi</p>
+
+      <form>
+        <h2>Contact Info</h2>
+        <input type="text" id="name-text" placeholder="first and last name" required="" pattern="(.*)\s(.*)"
+          class="form-control">
+      
+        <input type="email" id="email-text" placeholder="email address" required="" class="form-control">
+      
+        <input type="tel" id="phone-text" placeholder="phone number" required="" class="form-control">
+
+        <input type="text" id="subject-text" list="subject-data" placeholder="subject" class="form-control">
+        <datalist id="subject-data">
+          <option value="Sales Inquiry"></option>
+          <option value="Support Inquiry"></option>
+          <option value="Business Proposal"></option>
+          <option value="Job Search"></option>
+        </datalist>
+
+        <textarea name="" id="message-text" rows="5" placeholder="Message"
+          data-reqmsg="This field cannot be blank." aria-required="true" data-invmsg="Message is invalid"></textarea>
+      
+        <div class="push-down-top">
+          <button class="btn btn-link">Cancel</button>
+          <input type="submit" class="btn btn-default" value="Save">
+        </div>
+      
+      </form>
+
+    </section>
+
+    <footer class="main-footer">
+      <span>Paon Automation © Copyright 2018. All Rights Reserved.</span>
+    </footer>
+
+  </main>
+  
+  <script src="{{ url_for('static', filename='js/vendor/modernizr-3.7.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/vendor/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
