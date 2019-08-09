@@ -98,8 +98,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+h1 {
+  font-size: 64px;
+}
 
+h2 {
+  font-size: 35px;
+}
 
+.main-header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav ul li {
+  display: inline;
+}
 
 
 /* ==========================================================================
@@ -110,7 +125,7 @@ textarea {
 
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 .main-header {

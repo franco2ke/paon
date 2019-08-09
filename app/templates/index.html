@@ -17,8 +17,10 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -32,12 +34,13 @@
 
   <!-- application content starts here -->
   <header class="main-header">
-    
+
+      <nav>
       <a href="https://paon.co.ke/">
         <img src="{{ url_for('static', filename='img/PAON_LOGO.png') }}">
       </a>
-      <nav>  
-        <ul class="main-nav">
+        
+        <ul id="main-menu" class="main-nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#Services">Services</a></li>
           <li><a href="#Blog">Blog</a></li>
@@ -47,10 +50,12 @@
         </ul>
       </nav>
 
+      <div>
       <h1>We make your ideas come to life</h1>
       <h2>Electronic Manufacturing</h2>
       <h2>Software Development</h2>
       <a href="https://paon.co.ke/#services">Learn More</a>
+      </div>
     
   </header>
 
