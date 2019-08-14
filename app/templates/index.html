@@ -35,7 +35,8 @@
   <!-- application content starts here -->
   <header class="main-header">
 
-      <nav>
+    <div class="hero">
+      <nav class="clearfix">
       <a href="https://paon.co.ke/">
         <img src="{{ url_for('static', filename='img/PAON_LOGO.png') }}">
       </a>
@@ -50,11 +51,12 @@
         </ul>
       </nav>
 
-      <div>
-      <h1>We make your ideas come to life</h1>
-      <h2>Electronic Manufacturing</h2>
-      <h2>Software Development</h2>
-      <a href="https://paon.co.ke/#services">Learn More</a>
+      <section class="hero-content">
+        <h1>We make your ideas come to life</h1>
+        <h2>Electronic Manufacturing</h2>
+        <h2>Software Development</h2>
+        <a class="hero-button" href="https://paon.co.ke/#services">Learn More</a>
+      </section>
       </div>
     
   </header>
