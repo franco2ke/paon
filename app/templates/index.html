@@ -17,6 +17,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -33,33 +34,41 @@
   <![endif]-->
 
   <!-- application content starts here -->
-  <header class="main-header">
+  <div class="hero">
+    <header class="main-header">
 
-    <div class="hero">
-      <nav class="clearfix">
-      <a href="https://paon.co.ke/">
-        <img src="{{ url_for('static', filename='img/PAON_LOGO.png') }}">
-      </a>
+        <div class="non-mobile-nav">
+          <div class="main-header-top">
+            <a class="site-logo" href="https://paon.co.ke/">
+              <img src="{{ url_for('static', filename='img/PAON_LOGO.png') }}">
+            </a>
+            <a class="toggle">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+
+          <nav>
+            <ul id="main-menu" class="main-nav">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#Services">Services</a></li>
+              <li><a href="#Blog">Blog</a></li>
+              <li><a href="#About_Us">About Us</a></li>
+              <li><a href="#Careers">Careers</a></li>
+              <li><a href="#Contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
         
-        <ul id="main-menu" class="main-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#Services">Services</a></li>
-          <li><a href="#Blog">Blog</a></li>
-          <li><a href="#About_Us">About Us</a></li>
-          <li><a href="#Careers">Careers</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
-      </nav>
 
-      <section class="hero-content">
-        <h1>We make your ideas come to life</h1>
-        <h2>Electronic Manufacturing</h2>
-        <h2>Software Development</h2>
-        <a class="hero-button" href="https://paon.co.ke/#services">Learn More</a>
-      </section>
-      </div>
-    
-  </header>
+        <section class="hero-content">
+          <h1>We make your ideas come to life</h1>
+          <h2>Electronic Manufacturing</h2>
+          <h2>Software Development</h2>
+          <a class="hero-button" href="https://paon.co.ke/#services">Learn More</a>
+        </section>
+      
+    </header>
+  </div>
 
   <main>
     
@@ -192,6 +201,28 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  
+  <script>
+    (function () {
+
+        var hamburger = {
+          navToggle: document.querySelector('.toggle'),
+          nav: document.querySelector('.main-nav'),
+
+          doToggle: function (e) {
+            e.preventDefault();
+            if(this.nav.classList.toggle('active')) {
+              this.navToggle.innerHTML = "<i class='fas fa-times'></i>";
+            } else {
+              this.navToggle.innerHTML = "<i class='fas fa-bars'></i>";
+            } 
+          }
+        };
+
+        hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+
+      }());
+  </script>
 </body>
 
 </html>

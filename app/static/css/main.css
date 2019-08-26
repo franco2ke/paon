@@ -12,10 +12,12 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #fff;
   font-size: 1em;
   line-height: 1.4;
 }
+
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -94,11 +96,116 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
 
+/* ---- Author's Opinionated Defaults ----------- */
+
+a {
+  color: #656a6e;
+  text-decoration: none;
+  font-weight: 400; 
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+}
+
+
+
+/* ---------- Author's custom styles ------------ */
+
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(255,255,255,0.3);
+}
+
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* .sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 80%;
+} */
+
+.main-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav {
+  border-top: 3px solid #da670a;
+  margin-top: 1em;
+  background-color: white;
+  display: none;
+}
+
+.main-nav.active {
+  display: block;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  -webkit-transition-property: all; /* Safari */
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-property: all;
+  transition-duration: 0.8s;
+}
+
+.main-nav a {
+  display: block;
+  text-align: center;
+  padding: .4em;
+  border-bottom: 1px solid #ebecec;
+}
+
+.main-nav a:hover {
+  color: #fff;
+  border-bottom-color: #52bab3;
+}
+
+.toggle {
+  font-size: 2.1em;
+  padding-right: .5em;
+}
+
+.site-logo {
+  padding-left: .5em;
+  width: 110px;
+}
+
+.hero-content {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-bottom: 2em;
+}
 
 .hero-button {
   border: 2px solid #da670a;
@@ -216,17 +323,44 @@ body {
   Media Queries for Responsive Design
 ==================================== */
 
-/* Small devices (landscape phones, 480px and up) */
-@media only screen and (min-width: 480px){
-  /* shows elements in a column */
-}
- 
-
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+  .hero h2 {
+  font-size: 2em;
+  font-weight: 100;
+  }
 
+  .toggle {
+    display: none;
+  }
 
+  .non-mobile-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-header {
+    height: 100vh;
+  }
+
+  .main-header nav {
+    flex:0 0 500px;
+  }
+
+  
+  .main-nav {
+    display: flex;
+    margin-top: 0;
+    border-top: none;
+    background-color: #000;
+    justify-content: space-between;
+  }
+
+  .main-nav a {
+    color: #fff;
+    border-bottom: 1px solid #000;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
